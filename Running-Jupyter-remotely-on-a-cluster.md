@@ -1,3 +1,5 @@
+## Setting up jupyter to serve remotely over an ssh tunnel
+
 When you run `jupyter notebook`, by default it is not configured to let you interact with the notebook over a remote ssh session.  You have to set up a couple things to fix that.
 
 1. Configure jupyter to allow connections from browsers running on different machines; that means setting the `ip = 0.0.0.0` option in jupyter, and selecting a specific `port` to run on.
