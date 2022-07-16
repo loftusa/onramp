@@ -1,3 +1,5 @@
-Welcome to the onramp wiki!
+Welcome to the Bau Lab Onramp wiki!
 
 Find here information about [[Accessing Clusters]]
+
+And about [[Running Jupyter Remotely]]
