@@ -29,7 +29,9 @@ Then on your mac:
 
 Now you should be able to `ssh uno` without entering your password.
 
-The machines on `thevisible.net` are shared multiuser resources, which means that you can ssh to any machine you like, even if somebody else is already using it.  You can use `nvidia-smi` and `htop` and `who` to see who else may be using the machine, and pick a machine that is unused.  If you need some library on the machine, ask David to install it or ask for `sudo` membership.
+The machines on `thevisible.net` are ordinary Linux multiuser servers, which means that you can ssh to any machine you like, even if somebody else is already using it.  `who` will tell you who else is logged into a machine, and you should use `nvidia-smi` and `htop` to see which GPU and CPU resources are being used.  Pick a machine that is unused.
+
+If you need some library on the machine, ask David to install it or ask for `sudo` membership.
 
 ## Discovery HPC cluster
 
@@ -44,3 +46,39 @@ Host discovery
 ```
 
 Discovery is run as a supercomputer (HPC = high performance computing) cluster, which means that you need to use SLURM to queue up batch jobs, or to reserve machines to run interactively.
+
+Read about [https://rc-docs.northeastern.edu/en/latest/using-discovery/usingslurm.html](how to use SLURM on Discovery here).
+
+A typical sbatch file looks like this.  Except at the end, instead of just running `nvidia-smi` you would select some modules, activate a conda environment, and then run your python program.
+
+```
+#!/bin/bash
+#SBATCH --job-name=gpu_a100_check     # Job name
+#SBATCH --mail-type=END,FAIL          # Mail events (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=[username]@northeastern.edu
+#SBATCH --partition=gpu               # Use the public GPU partition
+#SBATCH --nodes=1                     # Run on a single CPU
+#SBATCH --ntasks=1                    # Run on a single CPU
+#SBATCH --gres=gpu:a100:1             # Run on a single a100
+#SBATCH --mem=1gb                     # Job memory request
+#SBATCH --time=00:05:00               # Time limit hrs:min:sec
+#SBATCH --output=gpu_a100_check.log   # Standard output and error log
+
+# The question: A100's come in two different memory sizes.  Which size do we have?
+
+hostname
+date
+nvidia-smi
+```
+
+To queue up the job, you would save this file as something like `gpu_a100_check.sbatch` and then run `sbatch gpu_a100_check.sbatch`.
+
+Then you can check on your queued jobs with `squeue`.
+
+Instead of queuing a batch, you can also run an interactive session like this:
+
+```
+srun --partition=gpu --nodes=1 --ntasks=1 --gres=gpu:k40m:1 --mem=10G --pty /bin/bash
+```
+
+If you run this command, you will get a shell session inside a k40m GPU machine, and you can just use it interactively just like any other ssh session.
