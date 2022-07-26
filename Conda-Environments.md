@@ -10,4 +10,5 @@ rm -rf .conda # remove the existing .conda directory
 ln -s /disk/u/[username]/dotconda .conda
 ```
 
+This will make a symbolic link from your home `~/.conda` directory to your own `dotconda` directory on the computer's local disk, which will work better for `conda`.
 
