@@ -6,7 +6,7 @@ When you run `jupyter notebook`, by default it is not configured to let you inte
 2. Configure a `password` for jupyter.
 3. And then use `ssh -L` port forwarding to make the port visible on your local machine.  Here is a specific example.
 
-Step 1. On the cluster computer where `jupyter` is running, you want to create a file `~/.jupyter/jupyter_notebook_config.json` that contains the following options:
+Step 1. On the cluster computer where `jupyter` is running (e.g., on `uno` or `duo`), you want to create a file `~/.jupyter/jupyter_notebook_config.json` that contains the following options:
 
 ```
 {
