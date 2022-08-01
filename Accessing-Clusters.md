@@ -19,7 +19,7 @@ Host thevisible
 
 ```
 
-Then you should be able to `ssh uno` (or etc) to get to one of the machines in `thevisible.net` cluster.  You may need to enter your password twice.
+Then you should be able to `ssh uno` (or etc) to get to one of the machines in `thevisible.net` cluster.  You may need to enter your password twice.  (The config above also sets up port forwarding on port 8888 to your local machine; change to your favorite port for jupyter).
 
 To avoid requiring your password, you should set up an ssh key.  Do the folowing:
 
