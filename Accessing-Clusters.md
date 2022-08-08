@@ -34,7 +34,7 @@ Then on your mac:
 > ssh-copy-id [user]@uno
 ```
 
-Now you should be able to `ssh uno` without entering your password.
+That command will ask for your password once or twice, maybe for the last time ever, in order to copy you `id_rsa.pub` public key to `thevisible.net`.  Now you should be able to `ssh uno` without entering your password.
 
 The machines on `thevisible.net` are ordinary Linux multiuser servers, which means that you can ssh to any machine you like, even if somebody else is already using it.  `who` will tell you who else is logged into a machine, and you should use `nvidia-smi` and `htop` to see which GPU and CPU resources are being used.  Pick a machine that is unused.
 
