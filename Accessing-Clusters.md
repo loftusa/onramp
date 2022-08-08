@@ -1,6 +1,6 @@
 ## thevisible.net
 
-[thevisible.net](`thevisible.net`) is David's personal GPU cluster.  David can give you an account.  There are a few A6000 GPUs available there, and they are useful for students and collaborators who do not have access to university resources.
+[`thevisible.net`](thevisible.net) is David's personal GPU cluster.  David can give you an account.  There are a few A6000 GPUs available there, and they are useful for students and collaborators who do not have access to university resources.
 
 The computers are accessible via jump host as follows.
 
@@ -42,7 +42,7 @@ If you need some library on the machine, ask David to install it or ask for `sud
 
 ## Discovery HPC cluster
 
-As a student at Northeastern you can have free access to the [https://rc-docs.northeastern.edu/en/latest/](Northeastern Discovery cluster).  You just fill out the [https://rc-docs.northeastern.edu/en/latest/first_steps/get_access.html](form here).
+As a student at Northeastern you can have free access to the [Northeastern Discovery cluster](https://rc-docs.northeastern.edu/en/latest/).  You just fill out the [form here](https://rc-docs.northeastern.edu/en/latest/first_steps/get_access.html).
 
 Once your account is approved you should be able to `ssh [username]@login.discovery.neu.edu`.  I shorten this to `ssh discovery` by adding the following to my `.ssh/config`:
 
@@ -54,7 +54,7 @@ Host discovery
 
 Discovery is run as a supercomputer (HPC = high performance computing) cluster, which means that you need to use SLURM to queue up batch jobs, or to reserve machines to run interactively.
 
-Read about [https://rc-docs.northeastern.edu/en/latest/using-discovery/usingslurm.html](how to use SLURM on Discovery here).
+Read about [how to use SLURM on Discovery here](https://rc-docs.northeastern.edu/en/latest/using-discovery/usingslurm.html).
 
 A typical sbatch file looks like this.  Except at the end, instead of just running `nvidia-smi` you would select some modules, activate a conda environment, and then run your python program.
 
