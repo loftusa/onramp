@@ -26,4 +26,4 @@ For example, for keeping a session open to quadro, I use:
 //opt/homebrew/bin/et quadro -j thevisible.net -c 'tmux new -As main'
 ```
 
-
+See [Reconnecting](Reconnecting-Automatically) for more about `et` and `tmux`.
