@@ -8,5 +8,9 @@ Installing conda [[Conda Environments]]
 
 Tips for [[Configuring a Mac]]
 
+Needed: tips for Configuring a Windows laptop.
+
 Tips for [[Reconnecting]] to your work after interrupting the network.
+
+How to put data on [[Websites]].
 
