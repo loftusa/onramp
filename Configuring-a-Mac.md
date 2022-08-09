@@ -11,9 +11,14 @@ As explained on the [homebrew](https://brew.sh/) webpage, you can:
 Then it's useful to install things like:
 
 ```
-brew install texlive   # For all sorts of LaTeX and pdf manipulation stuff
-brew install brew install MisterTea/et/et   # better than ssh, survives laptop sleep
-brew install wget      # sometimes easier than curl
+# For all sorts of LaTeX and pdf manipulation stuff
+brew install --cask mactex
+
+# better than ssh, survives laptop sleep
+brew install brew install MisterTea/et/et
+
+# sometimes easier than curl
+brew install wget
 ```
 
 ## iTerm2
