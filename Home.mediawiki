@@ -5,3 +5,8 @@ Find here information about [[Accessing Clusters]]
 And about [[Running Jupyter Remotely]]
 
 Installing conda [[Conda Environments]]
+
+Tips for [[Configuring a Mac]]
+
+Tips for [[Reconnecting]] to your work after interrupting the network.
+
