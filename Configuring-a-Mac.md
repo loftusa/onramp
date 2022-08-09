@@ -20,3 +20,10 @@ brew install wget      # sometimes easier than curl
 
 For terminal connections, I like [iTerm2](https://iterm2.com/), which I use together with `et`.
 
+For example, for keeping a session open to quadro, I use:
+
+```
+//opt/homebrew/bin/et quadro -j thevisible.net -c 'tmux new -As main'
+```
+
+
