@@ -6,4 +6,4 @@ If you make a (globally-readable) directory under your `/share/u/[username]/www`
 
 Similarly, for projects, if you make a (globally-readable) directory under your `/share/projects/[projectname]/www`, then it will become visible at a website at `https://thevisible.net/p/[projectname]/`. 
 
-It's an apache server.  If the default apache configuration isn't working for you, you can put an `.htaccess` in a directory to alter the settings.
+It's an apache server.  If the default apache configuration isn't working for you, you can put an `.htaccess` in a directory to alter the settings.  [Lots about htaccess on the web.](https://monovm.com/blog/htaccess-tips/)
