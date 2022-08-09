@@ -7,11 +7,9 @@ There are a few ways to fix this.
 
 `et` [https://eternalterminal.dev/](https://eternalterminal.dev/) and `mosh` [https://mosh.org/](https://mosh.org/) are both installed in `thevisible.net`, and both are `ssh` extensions that will automatically re-establish a connection after it is broken.
 
-They are very useful to use instead of `ssh` on your laptop, because then you can close and reopen your laptop lid, and it will work.
+They are client programs that you install on your laptop.  On a mac, you can install them with Homebrew. You use them just like you would use `ssh` on your laptop, but they add the feature that after you close and reopen your laptop lid, the connection stays live.
 
-To use them, you need to install them on your laptop.  On a mac, you can install them with Homebrew.
-
-They both work by authenticating and establishing a login using `ssh`, and then handing off the connection to a reconnecting protocol.  `mosh` hands off to udp ports 60000-60100, and `et` uses tcp port 2022.  `mosh` is actually a terminal emulator that will support typeahead and do things like skip transmission of things that are no longer visible; it is designed to be good for very slow connections.   `et` focuses just on the reconnection problem.  `et` is newer and supports more ssh-like features like jumphosts and port forwarding, so I use `et`.
+They both work by authenticating and establishing a login using `ssh`, and then handing off the connection to a more robust reconnecting protocol.  `mosh` hands off to udp ports 60000-60100, and `et` uses tcp port 2022.  `mosh` is actually a terminal emulator that will support typeahead and do things like skip transmission of things that are no longer visible; it is designed to be good for very slow connections.   `et` focuses just on the reconnection problem.  `et` is newer and supports more ssh-like features like jumphosts and port forwarding, so I use `et`.
 
 
 ## Virtual screens that persist after you log out
