@@ -5,7 +5,7 @@ There are a few ways to fix this.
 ## Terminal sessions that automatically reconnect
 
 
-`mosh` and `et` [Eternal Terminal](https://eternalterminal.dev/) are both installed in `thevisible.net`, and both are `ssh` alternatives that will automatically re-establish a connection after it is broken.
+`et` [(Eternal Terminal)](https://eternalterminal.dev/) and `mosh` are both installed in `thevisible.net`, and both are `ssh` alternatives that will automatically re-establish a connection after it is broken.  `et` is a newer and supports jumphosts and port forwarding, so I use `et`.
 
 They are very useful to use instead of `ssh` on your laptop, because then you can close and reopen your laptop lid, and it will work.
 
