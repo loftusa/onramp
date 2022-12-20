@@ -1,3 +1,29 @@
+## baulab.us at khoury
+
+The workstations at the Bau lab at khoury are organized in a small cluster.  David can give you an account that will allow you to log into any of the machines.  Each has an A6000 GPU (or two).
+
+To access these machines from outside Khoury, you will need to first ssh through `login.khoury.northeastern.edu`.   Note that your username on `login` will be the one given to you by Khoury whereas the username on the workstations will be the one given to you by David, which is probably different.
+
+You can use the following in your `.ssh/config` to set it up
+
+```
+Host karasuno karakuri hawaii tokyo umibozu kyoto
+    ProxyJump login.khoury.northeastern.edu
+    User [your username at baulab]
+
+Host login.khoury.northeastern.edu
+    User [your username at Khoury]
+```
+
+Note that each workstation is primarily used by one of the students, who may ask you to keep it clear in case they are actively using it. However if the machines are idle, feel free to use them.
+
+ * karasuno - Koyena
+ * hawaii - Nikhil
+ * tokyo - Eric
+ * umibozu - Arnab
+ * kyoto - Masters students
+ * karakuri - used to serve the Memit demo
+
 ## thevisible.net
 
 [`thevisible.net`](thevisible.net) is David's personal GPU cluster.  David can give you an account.  There are a few A6000 GPUs available there, and they are useful for students and collaborators who do not have access to university resources.
