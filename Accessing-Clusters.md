@@ -1,4 +1,4 @@
-## baulab.us at khoury
+## baulab cluster at Khoury
 
 The workstations at the Bau lab at khoury are organized in a small cluster.  David can give you an account that will allow you to log into any of the machines.  Each has an A6000 GPU (or two).
 
