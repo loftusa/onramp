@@ -35,7 +35,7 @@ If you are on a mac or linux (where openssh is available), edit your `~/.ssh/con
 ```
 Host uno quadro duo rtx
   User [your username is on thevisible.net]
-  ProxyJump thevisible
+  ProxyJump thevisible.net
   LocalForward localhost:8888 localhost:8888
 
 Host thevisible
