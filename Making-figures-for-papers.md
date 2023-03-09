@@ -1,6 +1,19 @@
-# The Figure Production Pipeline
+## Figure Design Tips
 
-Some thoughts on making high-quality figures for publication.
+It is common to make figures with details that are too tiny for your paper.  Keep in mind that the giant space you have in your desktop is not available for your figure in the paper, and it will fit into two or three inches in the end.  So, design your figures to be scaled way down.
+
+  * Make text very large.
+  * Make lines very thick.
+  * Avoid visual complexity.
+
+A good size to shoot for is to try to make the text in a figure about the same size as the text in the document, or very slightly smaller. Unless you have a good reason to choose a different font, use the same font for your figures as the font of the main paper.  (I.e., do not use the matplotlib default font; use Times.)
+
+In a two-column paper, keep in mind that there are two types of figure layout: the squarish one-column figure, or the wide two-column figure, and plan your layout accordingly.
+
+
+## The Figure Production Pipeline
+
+Some thoughts on the pipeline for making high-quality figures for publication.
 
 The key is to preserve as much resolution in the your figure-production pipeline going to the final pdf, i.e., you want to be careful not to accidentally pixelate text or reduce resolution of images.
 
