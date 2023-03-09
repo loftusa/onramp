@@ -1,3 +1,5 @@
+# The Figure Production Pipeline
+
 Some thoughts on making high-quality figures for publication.
 
 The key is to preserve as much resolution in the your figure-production pipeline going to the final pdf, i.e., you want to be careful not to accidentally pixelate text or reduce resolution of images.
