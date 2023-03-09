@@ -4,7 +4,7 @@ The workstations at the Bau lab at khoury are organized in a small cluster.  Dav
 
 To access these machines from outside Khoury, you will need to first ssh through `login.khoury.northeastern.edu`.   Note that your username on `login` will be the one given to you by Khoury whereas the username on the workstations will be the one given to you by David, which is probably different.
 
-You can use the following in your `.ssh/config` to set it up
+You can use the following in your `.ssh/config` (e.g., on your laptop) to set it up
 
 ```
 Host karasuno karakuri hawaii tokyo umibozu kyoto
