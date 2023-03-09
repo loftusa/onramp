@@ -115,3 +115,29 @@ srun --partition=gpu --nodes=1 --ntasks=1 --gres=gpu:k40m:1 --mem=10G --pty /bin
 ```
 
 If you run this command, you will get a shell session inside a k40m GPU machine, and you can just use it interactively just like any other ssh session.
+
+## CAIS Compute Cluster
+
+Some of our projects have been granted access to a compute cluster of 256 A-100s (each with 80GB memory) maintained by the Center for AI Safety (CAIS). David can request access for you by adding you to one of the projects. You will receive an email from a CAIS stuff shortly after then and need to complete the following steps.
+
+* Review CAIS policies and sign a legal contract to confirm that you agree to comply with them.
+* Create your SSH key with `ssh-keygen <path>`. It will create a public and a private key on selected destination `<path>`. You will need to send your public key to CAIS.
+* After receiving your signed legal contract and ssh key, CAIS will mail you your credentials to access the cluster. You can access the cluster with `ssh -i {path-to-private-key} {user-name}@{cluster-IP}`. *Your ssh keys aren't bound to your workstation. You can copy them to any device and access the cluster from there*.
+
+#### How to work?
+ssh into the head node with your credentials. But, you will need to hop into a gpu-node to access the A-100s. The jobs are scheduled using SLURM. Some example commands are given below.
+```
+# Interactive session
+srun   --gpus=2  --pty /bin/bash
+
+# Non interactive session
+sbatch  --gpus=2  example_launch_script.sbatch
+
+# cancel a submitted job
+scancel jobid  
+
+# cancels all jobs from username
+scancel -u username
+```
+
+Please refer to the [documentations](https://slurm.schedmd.com/tutorials.html) to learn more about SLURM and how to use it.
