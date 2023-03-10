@@ -125,19 +125,37 @@ Some of our projects have been granted access to a compute cluster of 256 A-100s
 * After receiving your signed legal contract and ssh key, CAIS will mail you your credentials to access the cluster. You can access the cluster with `ssh -i {path-to-private-key} {user-name}@{cluster-IP}`. *Your ssh keys aren't bound to your workstation. You can copy them to any device and access the cluster from there*.
 
 #### How to work?
-ssh into the head node with your credentials. But, you will need to hop into a gpu-node to access the A-100s. The jobs are scheduled using SLURM. Some example commands are given below.
+1. Install `conda` or `miniocnda` and `jupyter`
+2. Generate a config in your root directory with `jupyter notebook --generate-config`
+3. Set password `jupyter notebook password`
+4. Create a `jupyter.job` file and populate it with the following. Remember to change `<user_name>` and `<port>` as you want. 
 ```
-# Interactive session
-srun   --gpus=2  --pty /bin/bash
+#!/bin/bash
 
-# Non interactive session
-sbatch  --gpus=2  example_launch_script.sbatch
+# dump output and errors to a file
+SBATCH -o /data/<user_name>/jupyter-logs/J.log
+SBATCH -e /data/<user_name>/jupyter-logs/J.log
 
-# cancel a submitted job
-scancel jobid  
+# get tunneling info
 
-# cancels all jobs from username
-scancel -u username
+port=<port>
+node=$(hostname -s)
+user=$(whoami)
+
+# you probably want to activate a conda environment. don't need it if you are already in the environment
+conda activate <env_name>
+
+# run jupyter notebook
+jupyter-notebook --no-browser --port=${port} --ip=${node}
+
+``` 
+6. Submit a job with `sbatch --gpus=<num_gpus> jupyter.job`. Your job will be assigned a job_id. Check `squeue` and get the compute node your job was assigned to. You will need that on the next step.
+8. On your local machine run
 ```
+ssh -N -L <local_port>:<compute_node>:<jupyter_port> -i <private_ssh_key> <user_name>@<server>
+```
+9. On your local machine paste `http://localhost:<local_port>` on your browser. You will be prompted to input a password.
+10. Do whatever your heart desires! 
+11. If you need to quit, just cancel your job by `scancel <job_id>`.
 
 Please refer to the [documentations](https://slurm.schedmd.com/tutorials.html) to learn more about SLURM and how to use it.
