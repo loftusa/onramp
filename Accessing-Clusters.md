@@ -132,17 +132,14 @@ Some of our projects have been granted access to a compute cluster of 256 A-100s
 ```
 #!/bin/bash
 
-# dump output and errors to a file
-SBATCH -o /data/<user_name>/jupyter-logs/J.log
-SBATCH -e /data/<user_name>/jupyter-logs/J.log
 
 # get tunneling info
-
 port=<port>
 node=$(hostname -s)
 user=$(whoami)
 
 # you probably want to activate a conda environment. don't need it if you are already in the environment
+source /data/<user_name>/.bashrc
 conda activate <env_name>
 
 # run jupyter notebook
