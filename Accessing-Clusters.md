@@ -24,9 +24,9 @@ Note that each workstation is primarily used by one of the students, who may ask
  * kyoto - Masters students
  * karakuri - used to serve the Memit demo
 
-## thevisible.net
+## baukit.org
 
-[`thevisible.net`](thevisible.net) is David's personal GPU cluster.  David can give you an account.  There are a few A6000 GPUs available there, and they are useful for students and collaborators who do not have access to university resources.
+[`baukit.org`](baukit.org) is David's personal GPU cluster.  David can give you an account.  There are a few A6000 GPUs available there, and they are useful for students and collaborators who do not have access to university resources.
 
 The computers are accessible via jump host as follows.
 
@@ -34,18 +34,18 @@ If you are on a mac or linux (where openssh is available), edit your `~/.ssh/con
 
 ```
 Host uno quadro duo rtx
-  User [your username is on thevisible.net]
-  ProxyJump thevisible
+  User [your username is on baukit.org]
+  ProxyJump baukit
   LocalForward localhost:8888 localhost:8888
 
-Host thevisible
-  HostName thevisible.net
-  User [your username is on thevisible.net]
+Host baukit
+  HostName baukit.org
+  User [your username is on baukit.org]
   LocalForward localhost:8888 localhost:8888
 
 ```
 
-Then you should be able to `ssh uno` (or etc) to get to one of the machines in `thevisible.net` cluster.  You may need to enter your password twice.  (The config above also sets up port forwarding on port 8888 to your local machine; change to your favorite port for jupyter).
+Then you should be able to `ssh uno` (or etc) to get to one of the machines in `baukit.org` cluster.  You may need to enter your password twice.  (The config above also sets up port forwarding on port 8888 to your local machine; change to your favorite port for jupyter).
 
 To avoid requiring your password, you should set up an ssh key.  Do the folowing:
 
@@ -60,9 +60,9 @@ Then on your mac:
 > ssh-copy-id [user]@uno
 ```
 
-That command will ask for your password once or twice, maybe for the last time ever, in order to copy you `id_rsa.pub` public key to `thevisible.net`.  Now you should be able to `ssh uno` without entering your password.
+That command will ask for your password once or twice, maybe for the last time ever, in order to copy you `id_rsa.pub` public key to `baukit.org`.  Now you should be able to `ssh uno` without entering your password.
 
-The machines on `thevisible.net` are ordinary Linux multiuser servers, which means that you can ssh to any machine you like, even if somebody else is already using it.  `who` will tell you who else is logged into a machine, and you should use `nvidia-smi` and `htop` to see which GPU and CPU resources are being used.  Pick a machine that is unused.
+The machines on `baukit.org` are ordinary Linux multiuser servers, which means that you can ssh to any machine you like, even if somebody else is already using it.  `who` will tell you who else is logged into a machine, and you should use `nvidia-smi` and `htop` to see which GPU and CPU resources are being used.  Pick a machine that is unused.
 
 If you need some library on the machine, ask David to install it or ask for `sudo` membership.
 
