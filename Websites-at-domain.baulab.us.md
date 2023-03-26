@@ -20,6 +20,8 @@ There are two special filename patterns:
 
 In other words, you can just create files and directories inside your `www` directory inside your home directory or your project directory, and these will be served directly on subdirectories of `baulab.us`.  Be sure to `chmod a+rX` any files and directories you wish to serve.  The webserver runs as the user `www-data` that doesn't have permissions to read anything unless you explicitly give it that permission.
 
+Symlinks work, and they are a great way to post a subdirectory of your experimental data onto the web for collaborators to see.
+
 Don't plan to run any server-side scripts using this method, however, and do not use this to post anything that you expect thousands of people to download.  Keep in mind that `baulab.us` is a shared $99 computer, that we all share.  It does not have much capacity to think very hard, and it also doesn't have much bandwidth.
 
 If you have content that might consume a lot of bandwidth, work with David to post that content on `baulab.info` which is hosted at Google's cloud service and which has effectively infinite bandwidth.  More on that later.
