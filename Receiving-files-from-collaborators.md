@@ -27,5 +27,5 @@ Once the account is set up, the files will show up in subdirectories for the use
 
 We do run everything over https etc, so it follows encryption best practices.  But passwords are generally a pretty insecure thing.  So think of this as a way of keeping collaborator data off of search engines and twitter.  Do not use this for sharing the nuclear codes.
 
-The code for the upload service is a one-file open-source service from `https://github.com/prasathmani/tinyfilemanager`.  There have been security vulnerabilities in the design of such services in the past.  We should update the code periodically to keep on top of security patches.
+The code for the upload service is a one-file open-source php script from `https://github.com/prasathmani/tinyfilemanager`.  There have been security vulnerabilities in the design of such services in the past.  We should update the code periodically to keep on top of security patches.
 
