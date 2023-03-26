@@ -20,3 +20,5 @@ It is also possible to set up a private account for a collaborator who might nee
  4. Add a line like `'signify' => '$2y$10$w7sCk7pEdWujLPKex2cXwof9e41llRG1T8cfabw9QcFX55CarTcae'` to the users array.
 
 Like `.htaccess` passwords, the passwords here are not supersecure, but enough for sharing of proprietary data that you just want to keep off the public internet.
+
+Once the account is set up, the files will show up in subdirectories for the username, like `/share/projects/baulab/files/signify`
