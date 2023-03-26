@@ -22,3 +22,10 @@ It is also possible to set up a private account for a collaborator who might nee
 Like `.htaccess` passwords, the passwords here are not supersecure, but enough for sharing of proprietary data that you just want to keep off the public internet.
 
 Once the account is set up, the files will show up in subdirectories for the username, like `/share/projects/baulab/files/signify`
+
+## Security considerations
+
+Passwords are generally a pretty insecure thing, so don't use this for sharing the nuclear codes.
+
+The code for the upload service is a one-file open-source service from `https://github.com/prasathmani/tinyfilemanager`.  There have been security vulnerabilities in the design of such services in the past.  We should update the code periodically to keep on top of security patches.
+
