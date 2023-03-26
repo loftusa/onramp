@@ -12,5 +12,5 @@ Needed: tips for Configuring a Windows laptop.
 
 Tips for [[Reconnecting]] to your work after interrupting the network.
 
-How to put data on [[Websites]].
+How to put data on [[Websites under u and p directories]].
 
