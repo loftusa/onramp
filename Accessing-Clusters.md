@@ -23,7 +23,7 @@ Note that each workstation is primarily used by one of the students, who may ask
  * umibozu - Arnab
  * kyoto - Masters students
  * karakuri - used to serve the Memit demo
- * nagoya.research.khoury.edu - used to for LLMs and to prototype the engine service
+ * nagoya.research.khoury.edu - used for LLMs and to prototype the engine service
 
 ## baukit.org
 
