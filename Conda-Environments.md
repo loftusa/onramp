@@ -1,4 +1,4 @@
-## The visible.net Cluster
+## On baulab.us and baukit.org clusters
 
 Two things to set up.
 
