@@ -2,7 +2,9 @@ On all the bau cluster machines, you should be aware of three types of filesyste
 
 ## NFS filesystems
 
-NFS filesystems are mounted under `/share`.  These files are actually pulled off of a shared NFS server for the whole cluster, so that whatever files you see under `/share` will be the same even if you switch to another machine on the same cluster.  Notice that there are two different clusters: the university baulab.us cluster, and David's personal baukit.org cluster, and each one has its own NFS server which is unrelated to the other one.  But they both have the same overall directory organization, as follows. (The subdirectoriees of `/share` are mounted on-demand so may not appear if you just `ls /share`, but if you `ls /share/u` etc one level further, you should be able to see the following).  Under `/share` there are three subdirectories that should be available:
+NFS filesystems are mounted under `/share`.  These files are actually pulled off of a shared NFS server for the whole cluster, so that whatever files you see under `/share` will be the same even if you switch to another machine on the same cluster.
+
+Notice that there are two different clusters: the university baulab.us cluster, and David's personal baukit.org cluster, and each one has its own NFS server which is unrelated to the other one.  But they both have the same overall directory organization, as follows. (The subdirectoriees of `/share` are mounted on-demand so may not appear if you just `ls /share`, but if you `ls /share/u` etc one level further, you should be able to see the following).  Under `/share` there are three subdirectories that should be available:
 
  * `/share/u` includes all network user home directories.
  * `/share/projects` includes a directory for each project that is shared among more than one person.  You can create a new directory for your own project.  To be useful, you will generally want to make sure the project directories are group-writeable, e.g., `chmod g+rwX -R /share/projects/myproject`.  (If you create something in here that is not, David or somebody might go and make it writeable later.)
