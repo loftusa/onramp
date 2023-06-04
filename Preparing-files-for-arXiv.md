@@ -6,9 +6,11 @@ Uploading files on arXiv requires you to upload the raw latex source.  However, 
   * ArXiv will run LaTeX to compile, but it will not run bibtex.  Therefore your project must be packaged with the bbl file.
   * You probably want to strip out unused stuff.
 
+## When to upload things on arXiv
+
 By the way, you don't need to worry too much when testing your upload on arXiv; you should go ahead and try, and then feel free to erase things when it's not looking the way you want. There are many steps before anything uploaded is posted in public, and even after you go through the steps, it won't be posted for about a day.  (However: once it is posted, it is permanent and you are not allowed to take it down - so do be careful what you post.)
 
-One tidbit of lore: arXiv's daily cutoff time is 2pm ET daily, and the last things to be posted are the first ones to appear on the `recent new articles` lists, so if you want your post to be visible, the best time to hit "submit" is 1:59:59pm ET.  And some people think the best day to post is Thursday, since it will visible top on the recent lists all weekend.
+One tidbit of lore: arXiv's daily cutoff time is 2pm ET daily, and the last things to be posted are the first ones to appear on the `recent new articles` lists, so if you want your post to be visible, the best time to hit the final "submit" button in the last step on arXiv is 1:59:59pm ET. Some people think the best day to do that is Thursday, since it will visible top on the recent lists all weekend.
 
 ## Using arxiv_latex_cleaner
 
