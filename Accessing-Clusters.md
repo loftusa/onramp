@@ -1,4 +1,4 @@
-## baulab cluster at Khoury
+## baulab cluster at Khoury (baulab.us)
 
 The workstations at the Bau lab at khoury are organized in a small cluster.  David can give you an account that will allow you to log into any of the machines.  Each has an A6000 GPU (or two).
 
@@ -24,6 +24,8 @@ Note that each workstation is primarily used by one of the students, who may ask
  * kyoto - Masters students
  * karakuri - used to serve the Memit demo
  * nagoya.research.khoury.edu - used for LLMs and to prototype the engine service
+
+This cluster also contains a webserver (internally called `bauserver`) that serves `https://baulab.us/`.  In a pinch (e.g., in case of problems with the khoury login), you can log into the cluster directly over https using `https://shell.baulab.us/`.
 
 ## baukit.org
 
