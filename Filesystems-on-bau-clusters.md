@@ -1,4 +1,4 @@
-On all the bau cluster machines, you should be aware of three types of filesystems:
+On all the bau cluster machines (baulab.us at Khoury, e.g., karakuri, nagoya; and baukit.org, e.g., uno duo), you should be aware of three types of filesystems:
 
 ## NFS filesystems
 
