@@ -22,3 +22,7 @@ On some machines there is a local `/disk` directory.  This is a large local dire
 ## Local system disk
 
 Directories outside `/share/` and outside `/disk/` are ordinary systems directories that are local to the machine.  For example, each machine has its own `/etc/` and `/usr/` and `/var/` and `/opt/` directories.  These are all for unix configuration, binaries, logs, and libraries, and usually won't want to write anything into these directories.
+
+## Other clusters
+
+If you have tips on working with filesystems on the other clusters (Discovery, CAIS, etc etc) please add your wisdom here.
