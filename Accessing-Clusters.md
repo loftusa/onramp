@@ -72,7 +72,7 @@ If you need some library on the machine, ask David to install it or ask for `sud
 
 ## Discovery HPC cluster
 
-As a student at Northeastern you can have free access to the [Northeastern Discovery cluster](https://rc-docs.northeastern.edu/en/latest/).  You just fill out the [form here](https://rc-docs.northeastern.edu/en/latest/first_steps/get_access.html).
+As a student at Northeastern you can have free access to the [Northeastern Discovery cluster](https://rc-docs.northeastern.edu/en/latest/).  You just fill out the [form here](https://rc-docs.northeastern.edu/en/latest/first_steps/get_access.html).  There's a group for some specific permissions called "baulab" that you can ask to be in.
 
 Once your account is approved you should be able to `ssh [username]@login.discovery.neu.edu`.  I shorten this to `ssh discovery` by adding the following to my `.ssh/config`:
 
