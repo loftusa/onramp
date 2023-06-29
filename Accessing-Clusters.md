@@ -129,7 +129,7 @@ Some of our projects have been granted access to a compute cluster of 256 A-100s
 * After receiving your signed legal contract and ssh key, CAIS will mail you your credentials to access the cluster. You can access the cluster with `ssh -i {path-to-private-key} {user-name}@{cluster-IP}`. *Your ssh keys aren't bound to your workstation. You can copy them to any device and access the cluster from there*.
 
 #### How to work?
-1. Install `conda` or `miniocnda` and `jupyter`
+1. Install `conda` or `miniconda` and `jupyter`
 2. Generate a config in your root directory with `jupyter notebook --generate-config`
 3. Set password `jupyter notebook password`
 4. Create a `jupyter.job` file and populate it with the following. Remember to change `<user_name>` and `<port>` as you want. 
