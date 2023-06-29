@@ -5,7 +5,7 @@ There are a few ways to fix this.
 ## Terminal sessions that automatically reconnect
 
 
-`et` [https://eternalterminal.dev/](https://eternalterminal.dev/) and `mosh` [https://mosh.org/](https://mosh.org/) are both installed in `thevisible.net`, and both are `ssh` extensions that will automatically re-establish a connection after it is broken.
+`et` [https://eternalterminal.dev/](https://eternalterminal.dev/) and `mosh` [https://mosh.org/](https://mosh.org/) are both installed in `baukit.org`, and both are `ssh` extensions that will automatically re-establish a connection after it is broken.
 
 They are client programs that you install on your laptop.  On a mac, you can install them with Homebrew. You use them just like you would use `ssh` on your laptop, but they add the feature that after you close and reopen your laptop lid, the connection stays live.
 
