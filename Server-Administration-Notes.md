@@ -2,6 +2,8 @@ This page is a reference for the server guru for the group.
 
 ## User Account Administration
 
+### Setting up access to LDAP servers
+
 Both the baulab cluster at Khoury ("baulab.us") and David's cluster at baukit.org each have a separate LDAP domain served by a little openldap server.
 
 LDAP server address on baukit.org: "names" (192.168.0.2)
@@ -29,6 +31,8 @@ Host baukit.org
     User davidbau
 ```
 
+### Adding a user
+
 To add a user "lorem", do this:
   1. `ssh baunames` (or "names")
   2. browse to `http://localhost:8877` (or `http://localhost:8876`)
@@ -42,7 +46,21 @@ To add a user "lorem", do this:
   10. And DO update the uid for the user, which should be incremented by one.
   11. Remember to click "Create Object" to save the user record.
 
+Then: Manually add the same user with the same password on the other cluster, so both clusters have the same list of users.
 
+### How the remaining steps of login work
 
+On ubuntu, login is mediated by the "GNU Name Service Switch" (nsswitch) which is responsible for figuring resolving who the username resolves to when you try to log in.  The `/etc/nsswitch.conf` configuration file has a line `passwd: files systemd sss` which means that usernames and passwords are drawn from (1) first the standard linux files such as `/etc/passwd`, which will have local accounts like `localdavidbau`; (2) then the systemd service which enforces `root` should exist even if not listed in `/etc/passwd`; then (3) the system sercurity services (sss) daemon which knows how to use an LDAP server, and which will resolve ordinary network accounts like `davidbau`.
 
+In our cluster, The "System Security Services Daemon" SSSD does the work of checking network login; it is configured at `/etc/sssd/sssd.conf`.  That file tells SSSD how to reach the LDAP server, which is used to check or change the password, and which returns the cluster-wide numeric userid for a username.
+
+## Topics Needed
+
+- Ansible scripts and workstation setup.
+    - Where and how to run ansible.  /etc/ansible and the playbooks and the ansible script repo.
+
+    
+- NFS setup, both client and server
+    - How autofs is set up on the clients
+    - The synology NFS servers and how to administer them remotely.
 
