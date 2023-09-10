@@ -59,6 +59,10 @@ To add a user "lorem", do this:
 
 Then: Manually add the same user with the same password on the other cluster, so both clusters have the same list of users.
 
+### Changing a Password
+
+Just like adding a user - but modify the user record and use the phpLDAPadmin interface to set a new password.  Usually a good idea to set passwords at both baulab and baukit at the same time.
+
 ### How the remaining steps of login work
 
 See [this medium post](https://medium.com/@fengliplatform/understanding-nss-and-pam-using-a-ssh-example-80512eb0f39e) that explains the services we use for login on client machines in our little clusters.
