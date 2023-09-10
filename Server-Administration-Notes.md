@@ -45,7 +45,7 @@ Khoury login ids can be obtained here: https://my.khoury.northeastern.edu/accoun
 For baulab and baukit accounts, you will add them youselves with these steps.
 
 To add a user "lorem", do this:
-  1. `ssh baunames` (or "names")
+  1. `ssh baunames` (or `ssh names` for the baukit cluster)
   2. browse to `http://localhost:8877` (or `http://localhost:8876`)
   3. Log in as the administrator `cn=admin,dc=baulab,dc=us` (or `cn=admin,dc=thevisible,dc=net`). Admins will know the password.
   4. Use the left nav to visit the user record of the previous last user we added.
