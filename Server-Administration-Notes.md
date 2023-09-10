@@ -33,6 +33,17 @@ Host baukit.org
 
 ### Adding a user
 
+Remind users that they will have several different login IDs.
+   * The Northeastern login ID that is for their northeastern email and Windows passwords on Northeastern computers.
+   * The Khoury login id for `ssh` access to `login.khoury.northeastern.edu`.
+   * The baulab login ID for baulab student machines at 177.
+   * The baukit login ID for David's personal cluster at his house (baukit.org), usually the same name as the baulab one.
+   * And of course CAIS cluster etc are all different.
+
+Khoury login ids can be obtained here: https://my.khoury.northeastern.edu/account/apply - David will need to approve after the form is filled out.
+
+For baulab and baukit accounts, you will add them youselves with these steps.
+
 To add a user "lorem", do this:
   1. `ssh baunames` (or "names")
   2. browse to `http://localhost:8877` (or `http://localhost:8876`)
