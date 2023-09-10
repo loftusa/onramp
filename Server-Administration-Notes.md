@@ -59,7 +59,7 @@ To add a user "lorem", do this:
 
 Then: Manually add the same user with the same password on the other cluster, so both clusters have the same list of users.
 
-### Changing a Password
+### Changing a password for a user
 
 Just like adding a user - but modify the user record and use the phpLDAPadmin interface to set a new password.  Usually a good idea to set passwords at both baulab and baukit at the same time.
 
