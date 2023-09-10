@@ -49,7 +49,7 @@ To add a user "lorem", do this:
   2. browse to `http://localhost:8877` (or `http://localhost:8876`)
   3. Log in as the administrator `cn=admin,dc=baulab,dc=us` (or `cn=admin,dc=thevisible,dc=net`). Admins will know the password.
   4. Use the left nav to visit the user record of the previous last user we added.
-  5. "Copy or move the entry", and copy it to a new entry named `uid=lorem,ou=People,dc=thevisible,dc=net`
+  5. "Copy or move the entry", and copy it to a new entry with the new user's username, e.g., `uid=lorem,ou=People,dc=thevisible,dc=net`
   6. In the new record do NOT change the gid (it should still be 1025, research).
   7. But DO update the user's real name
   8. And DO update the home directory, which should be `/share/u/lorem`.
