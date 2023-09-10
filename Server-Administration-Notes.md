@@ -50,9 +50,21 @@ Then: Manually add the same user with the same password on the other cluster, so
 
 ### How the remaining steps of login work
 
-On ubuntu, login is mediated by the "GNU Name Service Switch" (nsswitch) which is responsible for figuring resolving who the username resolves to when you try to log in.  The `/etc/nsswitch.conf` configuration file has a line `passwd: files systemd sss` which means that usernames and passwords are drawn from (1) first the standard linux files such as `/etc/passwd`, which will have local accounts like `localdavidbau`; (2) then the systemd service which enforces `root` should exist even if not listed in `/etc/passwd`; then (3) the system sercurity services (sss) daemon which knows how to use an LDAP server, and which will resolve ordinary network accounts like `davidbau`.
+See [this medium post](https://medium.com/@fengliplatform/understanding-nss-and-pam-using-a-ssh-example-80512eb0f39e) that explains the services we use for login on client machines in our little clusters.
 
-In our cluster, The "System Security Services Daemon" SSSD does the work of checking network login; it is configured at `/etc/sssd/sssd.conf`.  That file tells SSSD how to reach the LDAP server, which is used to check or change the password, and which returns the cluster-wide numeric userid for a username.
+On ubuntu, user identification is mediated by the "GNU Name Service Switch" (nsswitch) which is responsible for figuring resolving who the username resolves during login.  The `/etc/nsswitch.conf` configuration file has a line `passwd: files systemd sss` which means that usernames and passwords are drawn from (1) first the standard linux files such as `/etc/passwd`, which will have local accounts like `localdavidbau`; (2) then the systemd service which enforces `root` should exist even if not listed in `/etc/passwd`; then (3) the system sercurity services (sss) daemon which knows how to use an LDAP server, and which will resolve ordinary network accounts like `davidbau`.
+
+In our cluster, The "System Security Services Daemon" SSSD knows how to talk to LDAP; it is configured at `/etc/sssd/sssd.conf`.  That file tells SSSD how to reach the LDAP server, which is used to get the cluster-wide numeric userid for a username.  It can also check or change the password.
+
+When it comes time to actually collect a password, linux consults the Pluggable Authentication System (PAM) which is configured in files within `/etc/pam.d`.  Specifically, we also set up PAM to consult with SSS for both checking and changing the password, which again, knows how to talk to LDAP.
+
+SSSD needs to use a trusted encrypted connection to transmit passwords.  We have a self-signed certificate that we use to trust the encryption used by the LDAP server; that trusted certificate is listed in `/etc/ssl/certs/ca-certificates.crt`.
+
+Once the user is authenticated (their password is OK), they're given their userid and they can log in.  The first thing done at login is to change to their home directory (by convention we have it as the `/share/u/[username]` directory), but on first login that directory does not yet exist.  
+
+We also set up `/etc/ldap/ldap.conf` that also describes how to read the LDAP server (I don't think this is used by the login process). This file allows the `ldapsearch` utility to run on all client machines, e.g., `ldapsearch -x` lists all the public information about users within the LDAP system on the cluster.
+
+All these configuration files are installed by the ansible script `ldapclient.yml`.
 
 ## Topics Needed
 
