@@ -128,12 +128,34 @@ Some of our projects have been granted access to a compute cluster of 256 A-100s
 * Create your SSH key with `ssh-keygen <path>`. It will create a public and a private key on selected destination `<path>`. You will need to send your public key to CAIS.
 * After receiving your signed legal contract and ssh key, CAIS will mail you your credentials to access the cluster. You can access the cluster with `ssh -i {path-to-private-key} {user-name}@{cluster-IP}`. *Your ssh keys aren't bound to your workstation. You can copy them to any device and access the cluster from there*.
 
-#### How to work?
-1. Install `conda` or `miniconda` and `jupyter`
-2. Generate a config in your root directory with `jupyter notebook --generate-config`
-3. Set password `jupyter notebook password`
-4. Create a `jupyter.job` file and populate it with the following. Remember to change `<user_name>` and `<port>` as you want. 
-```
+### How to work
+1. It is recommended that you install `conda` or `miniconda` there.
+2. You need to make sure that you are able to run your code with a sequence of commands. Then you would need to have a bash file like below
+```bash
+#!/bin/bash
+
+# run conda environment
+source /data/<username>/.bashrc
+conda activate <environment>
+
+# go to your project directory
+cd <project-directory>
+python <your-script>.py #(or some other sequence of commands)
+``` 
+3. Submit your job with `sbatch --gpus=<num_gpus> jupyter.job`. You can check your jobs with `squeue -u $(whoami)`. You can cancel your job with `scancel <job_id>`.
+
+Please refer to the [documentations](https://slurm.schedmd.com/tutorials.html) to learn more about SLURM and how to use it.
+
+#### How to work on a jupyter-notebook?
+
+> :warning: If you wanna connect jupyter-notebook on **VSCode**, refer [**here**](https://natli.notion.site/VSCode-IPYNBs-on-CAIS-Compute-Node-ed01ac83448542d6b510847c407766e0).
+
+
+1. Generate a config in your root directory with `jupyter notebook --generate-config`
+2. Set password `jupyter notebook password`
+3. Create a `jupyter.job` file and populate it with the following. Remember to change `<user_name>` and `<port>` as you want. 
+
+```bash
 #!/bin/bash
 
 
@@ -150,13 +172,10 @@ conda activate <env_name>
 jupyter-notebook --no-browser --port=${port} --ip=${node}
 
 ``` 
-6. Submit a job with `sbatch --gpus=<num_gpus> jupyter.job`. Your job will be assigned a job_id. Check `squeue` and get the compute node your job was assigned to. You will need that on the next step.
-8. On your local machine run
+4. Submit a job with `sbatch --gpus=<num_gpus> jupyter.job`. Your job will be assigned a job_id. Check `squeue` and get the compute node your job was assigned to. You will need that on the next step.
+5. On your local machine run
 ```
 ssh -N -L <local_port>:<compute_node>:<jupyter_port> -i <private_ssh_key> <user_name>@<server>
 ```
-9. On your local machine paste `http://localhost:<local_port>` on your browser. You will be prompted to input a password.
-10. Do whatever your heart desires! 
-11. If you need to quit, just cancel your job by `scancel <job_id>`.
-
-Please refer to the [documentations](https://slurm.schedmd.com/tutorials.html) to learn more about SLURM and how to use it.
+6. On your local machine paste `http://localhost:<local_port>` on your browser. You will be prompted to input a password.
+7. Do whatever your heart desires! If you need to quit, just cancel your job by `scancel <job_id>`.
