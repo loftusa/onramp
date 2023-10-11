@@ -1,6 +1,6 @@
 ## Classic deep network papers
 
-[Here's a list of classic deep network papers that David has curated](https://papers.baulab.info/00_README.html)
+[Here's a list of classic deep network papers that David has curated](https://papers.baulab.info)
 
 We need other such lists.  E.g., it would be useful to have
 
