@@ -13,8 +13,9 @@ There is a nice script to remove unused stuff and deal with image size limits, c
 
   1. Use python 3 (e.g., set up a python 3 conda environment)
   2. `pip install arxiv-latex-cleaner`
-  3. `git clone https://git.overleaf.com/[63f24a12347123469211234] my_paper`
-  4. `./make_arxiv.sh my_paper`
+  3. Make sure your main tex file in overleaf is in the top-level directory and called `main.tex`.
+  4. `git clone https://git.overleaf.com/[63f24a12347123469211234] my_paper`
+  5. `./make_arxiv.sh my_paper`
 
 The following script is the `make_arxiv.sh` script.  It runs bibtex and latex iteratively to get all the references resolved, and it runs arxiv_latex_cleaner with good settings; then it zips up the results for uploading to arXiv.
 
@@ -43,6 +44,10 @@ pdflatex main.tex
 cp main.pdf ../${DIR}_arXiv.pdf
 popd
 ```
+
+We've noticed a couple little quirks in the tool (add more tips here if you encounter issues).
+   * Make sure the main tex file is called `main.tex`.
+   * When you have references between files in latex, do not quote them.
 
 ## When to upload things on arXiv
 
