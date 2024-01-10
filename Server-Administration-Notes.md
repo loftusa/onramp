@@ -81,10 +81,37 @@ We also set up `/etc/ldap/ldap.conf` that also describes how to read the LDAP se
 
 All these configuration files are installed by the ansible script `ldapclient.yml`.
 
-## Topics Needed
+## Software installation via Ansible
 
-- Ansible scripts and workstation setup.
-    - Where and how to run ansible.  /etc/ansible and the playbooks and the ansible script repo.
+We manage software on the cluster using [ansible](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).  Ansible works by running special declarative ansible scripts (which are `.yml` files) to run installation commands on machines.  Ansible installation scripts try to be *idempotent*, which means that if you run them more then once, they should have the same effect as just running them once.  Ansible works over ssh, so when you run ansible, it (in parallel) opens ssh into the set of machines you are updating and runs the needed installation commands.
+
+We have written a set of ansible scripts to install and update standard software configuration as we use it in the bau lab.  These scripts are located on the `baunames` machine (which serves as the ansible hub as well as the ldap server for the lab... on David's home network, the `names` machine is set up similarly.)  On that machine, ansible scripts are located in `/srv/ansible`, and all hosts under the management of ansible are listed on `/etc/hosts/ansible`.
+
+Since ansible is even used to set up ldap user authentication, it runs using local administrator user accounts.  Specifically, David has a `localdavidbau` user account, and since Arnab is doing system administration, he also has a `localarnab` user account.  Every new machine that gets set up will have these local accounts; they will allow us to log in to fix the machines (either manually or via ansible) even if LDAP is broken.  When a new machine is set up, one of the first accounts created should be a `localdavidbau` or `localarnab` account, and it should have sudo access.  (Given one access via one such account, the ansible script `localadmin.yml` will set up the remaining ones.)
+
+The main ansible script is `main.yml` and it calls all the other ones.  To run ansible to update a single machine such as `saitama`, log in to `baunames` as `localarnab` or `localdavidbau` and then run:
+
+```
+cd /srv/ansible
+ansible-playbook -l saitama main.yml
+```
+
+If you run without the `-l saitama` flag, then the script will run to update all the machines in the cluster.
+
+There are some useful scripts that are not run by `main.yml`.  For example, if you need to reboot `saitama` - a common need after the Nvidia drivers have been updated, you can run `ansible-playbook -l saitama reboot.yml` (and if you omit the `-l saitama` you can reboot all the gpu machines in the cluster).
+
+Scripts run by `main.yml` are:
+- `ldapclient.yml` - does various magic sssd, libnss, pam, and ldap client set up (including installing the ldap server certificates) to allow machines to log in with user accounts from our ldap server.
+- `localadmin.yml` - sets up the local administrator accounts (`localdavidbau` and `localarnab`) including passwordless ssh key access.
+- `autofs.yml` - sets up the `/share` directory to mount standard NFS shares automatically
+- `packages.yml` - sets up a standard set of basic unix software packages for the lab including vim, emacs, tmux, screen, etc, from the standard ubuntu distribuion.  Includes latex and some other things too.
+- `eternal.yml` - installs Eternal Terminal
+- `cuda.yml` - installs Nvidia drivers while fixing common installation issues, and installs every cuda version.
+- `nvidiadocker.yml` - install Nvidia docker support
+- `miniconda.yml` - installs and upgrades a root installation of `conda`
+- `webserver.yml` - only runs on the (non-gpu) webserver machines, and sets up a standard apache setup, plus letsencrypt/certbot support.
+
+## Topics Needed
 
     
 - NFS setup, both client and server
