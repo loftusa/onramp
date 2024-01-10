@@ -81,7 +81,7 @@ We also set up `/etc/ldap/ldap.conf` that also describes how to read the LDAP se
 
 All these configuration files are installed by the ansible script `ldapclient.yml`.
 
-## Software installation via Ansible
+## Software Configuration Management via Ansible
 
 We manage software on the cluster using [ansible](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).  Ansible works by running special declarative ansible scripts (which are `.yml` files) to run installation commands on machines.  Ansible installation scripts try to be *idempotent*, which means that if you run them more then once, they should have the same effect as just running them once.  Ansible works over ssh, so when you run ansible, it (in parallel) opens ssh into the set of machines you are updating and runs the needed installation commands, including installing software packages and copying or editing whatever configuration files are needed.
 
