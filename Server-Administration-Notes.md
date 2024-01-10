@@ -75,7 +75,7 @@ When it comes time to actually collect a password, linux consults the Pluggable 
 
 SSSD needs to use a trusted encrypted connection to transmit passwords.  We have a self-signed certificate that we use to trust the encryption used by the LDAP server; that trusted certificate is listed in `/etc/ssl/certs/ca-certificates.crt`.
 
-Once the user is authenticated (their password is OK), they're given their userid and they can log in.  The first thing done at login is to change to their home directory (by convention we have it as the `/share/u/[username]` directory), but on first login that directory does not yet exist.  
+Once the user is authenticated (their password is OK), they're given their userid and they can log in.  The first thing done at login is to change to their home directory (by convention we have it as the `/share/u/[username]` directory), but on first login that directory does not yet exist.  We enable the `pam_mkhomedir.so` PAM module to automatically create (and populate a skleleton) user's home directory in this situation.
 
 We also set up `/etc/ldap/ldap.conf` that also describes how to read the LDAP server (I don't think this is used by the login process). This file allows the `ldapsearch` utility to run on all client machines, e.g., `ldapsearch -x` lists all the public information about users within the LDAP system on the cluster.
 
