@@ -6,6 +6,14 @@ Uploading files on arXiv requires you to upload the raw latex source.  However, 
   * ArXiv will run LaTeX to compile, but it will not run bibtex.  Therefore your project must be packaged with the bbl file.
   * You probably want to strip out unused stuff.
 
+In addition you'll want to follow the latex formatting advice on [this arXiv help page](https://info.arxiv.org/help/submit_tex.html)
+
+## Avoiding the arXiv "hold" error
+
+ArXiv will sometimes get a latex compilation error after you successfully submit, and then fail to publish your submission the next day.  We think this might often be caused by failure of automatic detection that we are using pdflatex processing. So be sure to follow the following advice from [the arXiv help page](https://info.arxiv.org/help/submit_tex.html):
+
+> arXiv fully supports and automatically recognizes PDFLaTeX. **You can ensure pdflatex processing by setting the flag \pdfoutput=1 within the first 5 lines of the preamble of the main .tex file.** You should not need any other special flag.
+
 
 ## Using arxiv_latex_cleaner
 
