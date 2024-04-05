@@ -4,7 +4,7 @@ An interesting new paper will get a spike in attention and word-of-mouth when it
 
 Each paper only has one chance to be a "new paper," so it is worthwhile to maximize the paper's chance at getting attention, credit, and citation when it is new. In our fast-moving field, usually the birth of a paper into public consciousness is the moment when the paper is posted on arXiv for the first time.  Here are the steps to follow at that moment.
 
-## Ten Steps to Remember When arXiv'ing a paper
+## Ten Steps to Follow When arXiv'ing a paper
 
 Before you arXiv a paper:
 1. Check the **authors**. Verify the order of the authors, and verify explicitly with all the authors that they are OK going "on the record" with the arXiv'ed paper as it is. Make sure everybody's name is spelled correctly and that contact information is accurate.
