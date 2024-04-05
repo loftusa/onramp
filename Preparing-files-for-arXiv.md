@@ -59,6 +59,18 @@ We've noticed a couple little quirks in the tool (add more tips here if you enco
    * Make sure the main tex file is called `main.tex`.
    * When you have references between files in latex, do not quote them.
 
+## Metadata
+
+When filling out arXiv metadata, you can copy the settings from other similar papers you've seen. For example, this is the metadata for the ROME paper:
+
+```
+TLDR: NeurIPS 2022. 35 pages, 30 figures. Code and data at https://rome.baulab.info/
+Subjects: Computation and Language (cs.CL); Machine Learning (cs.LG)
+ACM classes: I.2.7
+```
+
+Note that before peer-review you should *not* mention where it is submitted, but after acceptance you should update the TLDR it to mention the venue.  The TLDR should also link to the website, which you should have prepared before arXiv.  The subjects will determine which arXiv subscribers will see notifications of your paper.
+
 ## When to upload things on arXiv
 
 By the way, you don't need to worry too much when testing your upload on arXiv; you should go ahead and try, and then feel free to erase things when it's not looking the way you want. There are many steps before anything uploaded is posted in public, and even after you go through the steps, it won't be posted for about a day.  (However: once it is posted, it is permanent and you are not allowed to take it down - so do be careful what you post.)
