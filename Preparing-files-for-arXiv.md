@@ -1,3 +1,5 @@
+ArXiving a paper is a special moment. Before you start the process, read [the 10 steps to follow](Ten-Steps-for-arXiving-a-Paper). Then when it's time to physically post the paper on arXiv, use the technical guidelines on this page for wrestling with the arXiv LaTeX system.
+
 ## ArXiv restrictions on LaTeX
 
 Uploading files on arXiv requires you to upload the raw latex source.  However, the latex source that you need is slightly different from what overleaf will produce or accept for you, because:
