@@ -22,6 +22,8 @@ Before you arXiv a paper:
 9. Make all the resources **link** to all the others.  I.e., The paper should link to the website and github, and the website and github should link to each other and the paper. The twitter thread and slides and demos and videos should link to all of them.
 10. Finally, **post it** on arXiv (follow [these guidelines](Preparing-files-for-arXiv)) simultaneously to making the website live. The arXiv TLDR should include a link to the website. Wait a day for arXiv to make it public, link everything to their final URLs, and then post the twitter thread.
 
+By the way, at the end of peer-review when you are preparing a camera-ready version of the paper, it is a moment to go through the 10 steps again and update all your materials to their finished peer-reviewed form. Presenting at a conference, especially if you win an award, is another moment for people to form a first impression.
+
 ## The principles behind the guidelines
 
 What makes a paper worth passing on between researchers?  There are several levels of commitment that a reader can develop with a piece of research. They can be:
