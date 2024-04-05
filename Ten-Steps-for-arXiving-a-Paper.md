@@ -1,6 +1,6 @@
 ## Why posting on arXiv is a special moment
 
-An interesting new paper will get a spike in attention and word-of-mouth when it is first made available.  Readers who are excited by its findings will bookmark it to read, they will skim the materials and form a first impression.  And then they might decide to pass it on to other people who could be excited and pass it on further.
+An interesting new paper will get a spike in attention and word-of-mouth when it is first made available.  Readers who are excited by its findings will bookmark it to read, they will skim the materials, and they will form a first impression.  And then they might decide to pass it on to other people who could be excited and pass it on further.
 
 After a few days, the surprising results in the paper become somewhat-known, and the process slows down dramatically. Even when new readers discover and share it, their friends will have "seen it before," and it will not be naturally promoted in the same way.  Eventually the findings of the paper will become part of the generally-known common wisdom, and people might not even remember where they learned the ideas that you have created in your paper. Readers might encounter the paper and wonder why somebody wrote about something so obvious - even though the paper might have been the origin of the idea in the first place.
 
