@@ -11,12 +11,12 @@ Before you arXiv a paper:
 2. Add **acknowledgements** to the paper. Be sure to acknowledge and thank funding sources. Think about non-authors who have contributed ideas or efforts or resources and thank them.
 3. Prepare a **source code release** that allows the methods in the paper to be reproduced by a researcher who might want to build on top of it. The code should be clean and made available on github.
 4. Prepare a **website** that explains visually, and in web-friendly non-formal language, what readers can learn from the paper. You can copy our website template; it should include links to all the other resources, visual explanations of methods and results, and citations and bibliographic information.
-5. Prepare a **data release** where any data (or trained model weights et.) needed to reproduce your paper are cleanly formatted and made available e.g., as a zip to download.  This can be posted on a directory of the website.
+5. Prepare a **data release** where any data (or trained model weights etc.) needed to reproduce your paper are cleanly formatted and made available e.g., as a zip to download.  This can be posted on a directory of the website.
 6. Prepare a **twitter thread** with 5-10 twitter posts that link to previous conversations about background research, and that explain the paper's motivation and main findings.  (Typefully can be used to manage the post.)
 7. Consider preparing **tutorial slides** for a short presentation about the paper's methods and findings (e.g., a pptx file).  Such slides will be used by people who are thinking of teaching your paper in a reading group or in a class.  Once you have slides, consider recording a **short video** of an author presenting the slides.
 8. Consider creating an **online demo** of your work.  This could be as simple as a colab notebook that demonstrates how to apply the method, or it could be a more-involved custom web demo.
 9. Make all the resources link to all the others.  I.e., The paper should link to the website and github, and the website and github should link to each other and the paper. The twitter thread and slides and demos and videos should link to all of them.
-10. Finally, post it on arXiv simultaneously to making the website live, wait a day, link everything to their final URLs, and then post the twitter thread.
+10. Finally, post it on arXiv (follow [these guidelines](Preparing-files-for-arXiv)) simultaneously to making the website live, wait a day, link everything to their final URLs, and then post the twitter thread.
 
 ## The principles behind the guidelines
 
