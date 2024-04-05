@@ -26,10 +26,10 @@ Before you arXiv a paper:
 
 What makes a paper worth passing on between researchers?  There are several levels of commitment that a reader can develop with a piece of research. They can be:
 
-1. A reader: It teaches us something new that we want to know.
-2. A citer: It validates (or challenges) the reader's own work and beliefs in the community discussion.
-3. A teacher: It explains something well that we would like to teach to others.
-4. A researcher: It forms the foundation for further work we want to pursue.
+1. A **reader**: Because it teaches us something new that we want to know.
+2. A **citer**: Because it validates (or challenges) the reader's own work and beliefs in the community discussion.
+3. A **teacher**: Because it explains something well that we would like to teach to others.
+4. A **researcher**: Because it forms the foundation for further work we want to pursue.
 
 An academic paper is typically too dense to absorb quickly, so all the supporting material around a paper will help people assess whether the research meets their needs.  Ideally, when a person sees the paper for the first time, we give them enough information to know how high on the "ladder of commitment" a person will want to go with the paper.  Should they just skim it for knowledge? Should they repost it? Should they learn it well enough to re-teach its ideas?  Should they dig into it well enough to build their own work on it?
 
