@@ -4,7 +4,9 @@ An interesting new paper will get a spike in attention and word-of-mouth when it
 
 After a few days, the surprising results in the paper become somewhat-known, and the process slows down dramatically. Even when new readers discover and share it, their friends will have "seen it before," and it will not be naturally promoted in the same way.  Eventually the findings of the paper will become part of the generally-known common wisdom, and people might not even remember where they learned the ideas that you have created in your paper. Readers might encounter the paper and wonder why somebody wrote about something so obvious - even though the paper might have been the origin of the idea in the first place.
 
-Each paper only has one chance to be a "new paper," so it is worthwhile to maximize the paper's chance at getting the attention, credit, and citations that it deserves. In our fast-moving field, usually the birth of a paper into public consciousness is the moment when the paper is posted on arXiv for the first time.  Here are the steps to follow at that moment.
+Each paper only has one chance to be a "new paper," so it is worthwhile to maximize the paper's chance at getting the attention, credit, and citations that it deserves. In our fast-moving field, usually the birth of a paper into public consciousness is the moment when the paper is posted on arXiv for the first time.
+
+Here are the steps to follow at that moment.
 
 ## Ten Steps to Follow When arXiv'ing a paper
 
