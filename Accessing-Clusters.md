@@ -35,9 +35,9 @@ Note that each workstation is primarily used by one of the students, who may ask
  * kobe - Rohit
  * macondo - Sheridan
  * naoshima - demo machine for Hendrik Strobelt
- # bippu - Imke's visiting machine
- # osaka - visitor machine
- # hamada - visitor machine
+ * bippu - Imke's visiting machine
+ * osaka - visitor machine
+ * hamada - visitor machine
 
 This cluster also contains a webserver (internally called `bauserver`) that serves `https://baulab.us/`.  In a pinch (e.g., in case of problems with the khoury login), you can log into the cluster directly over https using `https://shell.baulab.us/`.
 
