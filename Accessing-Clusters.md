@@ -11,7 +11,7 @@ To access these machines from outside Khoury, you will need to first ssh through
 You can use the following in your `.ssh/config` (e.g., on your laptop) to set it up
 
 ```
-Host karasuno karakuri hawaii tokyo umibozu kyoto
+Host karasuno karakuri hawaii tokyo umibozu kyoto karakuri saitama bippu osaka hamada
     ProxyJump login.khoury.northeastern.edu
     User [your username at baulab]
 
