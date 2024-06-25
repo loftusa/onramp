@@ -28,7 +28,7 @@ Note that each workstation is primarily used by one of the students, who may ask
  * kyoto - Masters students
  * karakuri - (dual gpu) used to serve the Memit demo
  * saitama - (dual gpu)
- * nagoya.research.khoury.edu - used for LLMs and to prototype the engine service
+ * nagoya.research.khoury.northeastern.edu - used for LLMs and to prototype the engine service
  * hokkaido - Aaron
  * ei - David A
  * andromeda - Sam
